@@ -1,0 +1,42 @@
+{
+  "name": "react-fetch-mock",
+  "version": "0.0.1",
+  "description": "How to test mocked fetches in Jest for a React component",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/__mocks__/requestAnimationFrame.js"
+    ]
+  },
+  "author": "Alfonso Muñoz-Pomer Fuentes <amunoz@ebi.ac.uk>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alfonsomunozpomer/react-fetch-mock.git"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "fetch-mock": "^5.12.2",
+    "jest": "^21.1.0",
+    "react-test-renderer": "^16.0.0"
+  }
+}
