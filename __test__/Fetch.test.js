@@ -67,6 +67,7 @@ describe(`Mocking fetch`, () => {
 
   test(`using promises`, () => {
     expect.assertions(1)
+    // Must return or the expect will not run within this test!
     return fetchResponseJson(`http://foo.bar`).then(
       (responseJson) => { expect(responseJson).toHaveProperty(`Rick`, `I turned myself into a pickle, Morty!`) })
   })
