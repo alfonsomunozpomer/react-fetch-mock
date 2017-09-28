@@ -60,6 +60,11 @@ fetchMock.get(`*`, JSON.stringify({Rick: `I turned myself into a pickle, Morty!`
 
 describe(`Mocking fetch`, () => {
 
+  // If you want to have different mocks for each test uncomment beforeEach
+  // beforeEach(() => {
+  //   fetchMock.restore()
+  // })
+
   test(`fails with synchronous code`, () => {
     const responseJson = fetchResponseJson(`http://foo.bar`)
     expect(responseJson).not.toHaveProperty(`Rick`, `I turned myself into a pickle, Morty!`)
